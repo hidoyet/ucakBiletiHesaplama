@@ -9,64 +9,64 @@ public class Main {
 		int age,range,ticketType;
 		double price,discountedPrice;
 		
-		System.out.println("Yaşınızı giriniz:");
+		System.out.println("YaÅŸÄ±nÄ±zÄ± giriniz:");
 		age=scanner.nextInt();
 		if(age<0) {
-			System.out.println("Hatalı Veri Girdiniz !");
+			System.out.println("HatalÄ± Veri Girdiniz !");
 		}
-		System.out.println("Gideceğiniz mesafeyi km cinsinden giriniz:");
+		System.out.println("GideceÄŸiniz mesafeyi km cinsinden giriniz:");
 		range=scanner.nextInt();
 		if(range<0) {
-			System.out.println("Hatalı Veri Girdiniz !");
+			System.out.println("HatalÄ± Veri Girdiniz !");
 		}
 		price=range*0.1;
-		System.out.println("Tek yön bilet için 1,gidiş-dönüş bilet için 2'yi seçiniz");
+		System.out.println("Tek yÃ¶n bilet iÃ§in 1,gidiÅŸ-dÃ¶nÃ¼ÅŸ bilet iÃ§in 2'yi seÃ§iniz");
 		ticketType=scanner.nextInt();
 		if(ticketType<0&&ticketType>2) {
-		System.out.println("Hatalı Veri Girdiniz !");
+		System.out.println("HatalÄ± Veri Girdiniz !");
 		}
-		//12 yaş altı için bilet fiyatı
+		//12 yaÃ¾ altÄ± iÃ§in bilet fiyatÄ±
 		if(age<12&&ticketType==1) {
 			
 			discountedPrice=price*0.5;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
 		if(age<12&&ticketType==2) {
 			
 			discountedPrice=price*0.5*0.8;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
 		
-		//12-24 yaş arası için bilet fiyatı
+		//12-24 yaÅŸ arasÄ± iÃ§in bilet fiyatÄ±
 
 		if(age>=12&&age<=24&&ticketType==2) {
 			discountedPrice=price*0.9*0.8;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
 		if(age>=12&&age<=24&&ticketType==1) {
 			discountedPrice=price*0.9;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
 		
-		//24-65 arası bilet fiyatı
+		//24-65 arasÄ± bilet fiyatÄ±
 		if(age>=25&&age<=65&&ticketType==2) {
 			discountedPrice=price*0.8;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
 		if(age>=25&&age<=65&&ticketType==1) {
 			discountedPrice=price;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
-		//65 yaş üstü için
+		//65 yaÅŸ Ã¼stÃ¼ iÃ§in
 		if(age>65&&ticketType==1) {
 			
 			discountedPrice=price*0.7;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
 		if(age>65&&ticketType==2) {
 			
 			discountedPrice=price*0.7*0.8;
-			System.out.println("Bilet fiyatınız: " + discountedPrice + "TL");
+			System.out.println("Bilet fiyatÄ±nÄ±z: " + discountedPrice + "TL");
 		}
 
 	}
